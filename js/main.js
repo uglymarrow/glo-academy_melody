@@ -6,7 +6,12 @@ $(document).ready(function () {
     var modal = $(".modal");
     var modalCloseButton = $(".modal-close-button");
     var viewFlatsButton = $(".view-flats");
+    var menuButton = $(".menu-button");
+    var navbarPanel = $(".navbar-panel");
 
+    menuButton.on("click", function () {
+        navbarPanel.toggle("slow");
+    });
 
     floorPath.on("mouseover", function () {
         floorPath.removeClass("current-floor");

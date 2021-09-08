@@ -21,12 +21,30 @@ body {
   border-bottom: 4px solid #3596f5;
 }
 
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
 .navbar {
-  max-width: 1280px;
-  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.navbar-panel {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-button {
+    display: none;
+}
+
+.navbar-nav {
+    margin: auto;
 }
 
 .navbar-menu {
@@ -67,10 +85,13 @@ body {
 }
 
 .main {
-  max-width: 1280px;
-  margin: auto;
   padding-top: 54px;
   display: flex;
+}
+
+.home-image {
+    width: 100%;
+    max-width: 734px;
 }
 
 .home-image path {
@@ -156,6 +177,11 @@ path.current-floor {
     transform: scale(1);
 }
 
+.flats {
+    max-width: 433px;
+    width: 100%;
+}
+
 .flats path {
     opacity: 0;
     cursor: pointer;
@@ -190,7 +216,7 @@ path.current-floor {
     right: 27px;
     border: none;
     cursor: pointer;
-    background-color: #fff;
+    background-color: transparent;
 }
 
 .modal-image {
@@ -255,4 +281,104 @@ path.current-floor {
     line-height: 19px;
     color: #635854;
     margin-top: 56px;
+}
+
+@media (max-width: 1400px) {
+    .container {
+        width: 90%;
+        max-width: 1200px;
+    }
+}
+
+@media (max-width:1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .navbar-item {
+        margin: 0 20px 0 20px;
+    }
+
+    .main-info {
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 760px;
+    }
+
+    .navbar-panel {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 60px;
+        background-color: #635854;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .navbar-menu {
+        display: block;
+    }
+
+    .navbar-item {
+        margin-bottom: 20px;
+    }
+
+    .navbar-contacts {
+        text-align: center;
+    }
+
+    .menu-button {
+        background-color: transparent;
+        width: 40px;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .menu-button  .line {
+        display: block;
+        height: 3px;
+        width: 40px;
+        background-color: #fff;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        display: block;
+    }
+
+    .main-info {
+        padding : 20px;
+        margin:auto;
+    }
+
+    .counter-group {
+        margin: 40px 0 40px 0;
+    }
+
+    .modal-dialog {
+        flex-direction: column;
+    }
+
+    .modal-image, .modal-info {
+        width: 100%;
+    }
+
+    .flats {
+       max-width: 250px; 
+    }
+
+    .modal-info {
+        text-align: center;
+    }
 }
